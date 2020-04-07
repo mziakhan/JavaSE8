@@ -1,4 +1,4 @@
-package LambdaExpressionExamples;
+package com.netlink.jse8.LambdaExpressionExamples;
 
 public class RunnableImplementationByLambda {
 
