@@ -53,8 +53,6 @@ public class Student {
         this.name = name;
     }
 
-
-
     public String getGender() {
         return gender;
     }
