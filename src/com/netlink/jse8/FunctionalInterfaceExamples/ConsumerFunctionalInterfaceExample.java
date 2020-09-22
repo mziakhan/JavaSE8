@@ -26,9 +26,10 @@ public class ConsumerFunctionalInterfaceExample {
 
     public static void printNameAndActivitiesUsingBiConsumer(){
         List<Student>studentsList= StudentDatabase.getAllStudents();
+        studentsList.forEach(student -> {studentNameAndActivities.accept(student.getName(),student.getActivities());});
     }
 
-    public static void printNameAndActivitiesConditonalBasis(){
+    public static void printNameAndActivitiesConditionalBasis(){
         List<Student>studentsList= StudentDatabase.getAllStudents();
         studentsList.forEach(student -> {
             if (student.getGradeLevel()>=3.9 && student.getGradeLevel()<= 4.0){
@@ -41,6 +42,7 @@ public class ConsumerFunctionalInterfaceExample {
        // integerConsumer.accept(3000/342);
         //printStudetsList();
       //  printNameAndActivities();
-        printNameAndActivitiesConditonalBasis();
+        printNameAndActivitiesConditionalBasis();
+        printNameAndActivitiesUsingBiConsumer();
     }
 }
